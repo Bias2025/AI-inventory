@@ -1,1 +1,6 @@
-
+[
+  { "id": "R-0142", "title": "Hallucinated citations in customer-facing summaries", "severity": "High", "owner": "AI Product", "status": "Mitigating" },
+  { "id": "R-0109", "title": "PII leakage via prompt injection", "severity": "High", "owner": "Security", "status": "Open" },
+  { "id": "R-0081", "title": "Model drift on fraud signals", "severity": "Medium", "owner": "Data Science", "status": "Monitoring" },
+  { "id": "R-0066", "title": "Vendor SLA gaps for incident reporting", "severity": "Medium", "owner": "Procurement", "status": "Mitigating" }
+]

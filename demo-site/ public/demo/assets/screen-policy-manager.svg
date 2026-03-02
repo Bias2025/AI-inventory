@@ -17,7 +17,7 @@
   <rect x="890" y="84" width="210" height="20" rx="10" fill="#E2E8F0"/>
   <rect x="96" y="160" width="1008" height="120" rx="18" fill="url(#accent)" opacity="0.18"/>
   <g fill="#0B1220" opacity="0.75" font-family="ui-sans-serif, system-ui" font-size="22">
-    <text x="112" y="208">AModel Inventory (Demo)</text>
+    <text x="112" y="208"> Model Inventory (Demo)</text>
   </g>
   <g>
     <rect x="96" y="310" width="320" height="150" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>

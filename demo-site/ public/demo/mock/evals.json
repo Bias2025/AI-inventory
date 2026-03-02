@@ -1,1 +1,6 @@
-
+[
+  { "suite": "Safety", "passRate": 0.92, "notes": "Prompt-injection hardened baseline." },
+  { "suite": "Hallucination", "passRate": 0.86, "notes": "Citations improved via retrieval rules." },
+  { "suite": "PII", "passRate": 0.95, "notes": "Redaction + policy filters enabled." },
+  { "suite": "Bias", "passRate": 0.88, "notes": "Ongoing fairness tuning on edge cohorts." }
+]

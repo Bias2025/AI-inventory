@@ -1,1 +1,11 @@
-
+{
+  "org": "Acme Financial (Demo)",
+  "period": "Last 30 days",
+  "kpis": [
+    { "label": "Open risks", "value": 18, "delta": -3 },
+    { "label": "High-risk use cases", "value": 4, "delta": 1 },
+    { "label": "Controls mapped", "value": 112, "delta": 9 },
+    { "label": "Evidence items", "value": 67, "delta": 12 },
+    { "label": "LLM eval runs", "value": 53, "delta": 7 }
+  ]
+}

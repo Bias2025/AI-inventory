@@ -1,1 +1,38 @@
-
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFEFF"/><stop offset="0.45" stop-color="#EEF2FF"/><stop offset="1" stop-color="#F5F3FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="140" y1="120" x2="1060" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/><stop offset="0.45" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0B1220" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect x="70" y="60" width="1060" height="600" rx="26" fill="white" filter="url(#shadow)"/>
+  <rect x="70" y="60" width="1060" height="72" rx="26" fill="#FFFFFF"/>
+  <rect x="96" y="84" width="220" height="20" rx="10" fill="#E2E8F0"/>
+  <rect x="890" y="84" width="210" height="20" rx="10" fill="#E2E8F0"/>
+  <rect x="96" y="160" width="1008" height="120" rx="18" fill="url(#accent)" opacity="0.18"/>
+  <g fill="#0B1220" opacity="0.75" font-family="ui-sans-serif, system-ui" font-size="22">
+    <text x="112" y="208">AI Trust Center (Demo)</text>
+  </g>
+  <g>
+    <rect x="96" y="310" width="320" height="150" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="440" y="310" width="320" height="150" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="784" y="310" width="320" height="150" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="120" y="342" width="180" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="464" y="342" width="200" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="808" y="342" width="170" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="120" y="380" width="250" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="464" y="380" width="250" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="808" y="380" width="250" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="96" y="486" width="1008" height="150" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="120" y="516" width="280" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="120" y="552" width="940" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="120" y="576" width="890" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="120" y="600" width="920" height="10" rx="5" fill="#E2E8F0"/>
+  </g>
+</svg>

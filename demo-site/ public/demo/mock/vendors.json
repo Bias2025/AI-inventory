@@ -1,1 +1,5 @@
-
+[
+  { "name": "Cloud LLM Provider (Demo)", "risk": "Medium", "lastReview": "2026-02-01", "notes": "Data residency validated. DPIA attached." },
+  { "name": "Vector DB Vendor (Demo)", "risk": "Low", "lastReview": "2026-01-19", "notes": "SOC2 Type II reviewed." },
+  { "name": "Observability Vendor (Demo)", "risk": "Low", "lastReview": "2026-02-10", "notes": "Incident runbooks integrated." }
+]

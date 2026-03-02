@@ -1,1 +1,6 @@
-
+[
+  { "framework": "EU AI Act", "control": "Human oversight", "coverage": 0.78 },
+  { "framework": "ISO 42001", "control": "Lifecycle governance", "coverage": 0.66 },
+  { "framework": "NIST AI RMF", "control": "Measure & manage risk", "coverage": 0.72 },
+  { "framework": "ISO 27001", "control": "Access control & logging", "coverage": 0.81 }
+]

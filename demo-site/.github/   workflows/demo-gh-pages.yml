@@ -39,7 +39,7 @@ jobs:
 
       - name: Build
         env:
-          VITE_BASE: "/verifywise/"
+          VITE_BASE: "/AI-inventory/"
         run: npm run build
 
       - name: Upload artifact

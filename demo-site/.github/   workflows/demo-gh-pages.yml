@@ -1,8 +1,8 @@
-name: Deploy client demo to GitHub Pages
+name: Deploy demo to GitHub Pages
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: ["main"]
     paths:
       - "demo-site/**"
       - ".github/workflows/demo-gh-pages.yml"
@@ -20,9 +20,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: demo-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,9 +32,11 @@ jobs:
           cache-dependency-path: demo-site/package-lock.json
 
       - name: Install
+        working-directory: demo-site
         run: npm ci
 
       - name: Build
+        working-directory: demo-site
         env:
           VITE_BASE: "/AI-inventory/"
         run: npm run build

@@ -20,9 +20,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,6 +33,13 @@ jobs:
           node-version: "20"
           cache: "npm"
           cache-dependency-path: demo-site/package-lock.json
+
+      - name: Debug (paths)
+        run: |
+          echo "PWD=$(pwd)"
+          ls -la
+          ls -la demo-site
+          ls -la demo-site/package-lock.json
 
       - name: Install
         working-directory: demo-site
@@ -41,6 +51,11 @@ jobs:
           VITE_BASE: "/AI-inventory/"
         run: npm run build
 
+      # SPA routing support on GitHub Pages:
+      # copy index.html to 404.html so refresh/deep links work
+      - name: Add 404.html for SPA routing
+        run: cp demo-site/dist/index.html demo-site/dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -49,6 +64,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

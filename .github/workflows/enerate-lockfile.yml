@@ -1,0 +1,50 @@
+name: Generate package-lock for demo-site
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write   # we will commit the new lockfile
+
+jobs:
+  regen-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # ensure all files are available
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Show current demo-site files (debug)
+        run: |
+          echo "PWD=$(pwd)"
+          ls -la
+          echo "demo-site contents:"
+          ls -la demo-site || true
+
+      - name: Generate package-lock (package-lock-only)
+        working-directory: demo-site
+        run: |
+          # remove any broken lockfile then generate a fresh one
+          rm -f package-lock.json || true
+          npm install --package-lock-only
+          echo "lockfile generated; head:"
+          sed -n '1,20p' package-lock.json || true
+
+      - name: Commit and push package-lock.json (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add demo-site/package-lock.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: regenerate demo-site/package-lock.json via workflow"
+            git push
+          fi
